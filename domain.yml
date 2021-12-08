@@ -1,0 +1,21 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- begruessen
+- verabschieden
+- inform_gemuese
+entities:
+- gemuese
+slots:
+  gemuese:
+    type: text
+    influence_conversation: true
+responses:
+  utter_begruessen:
+  - text: Guten Tag! Wie geht's Ihnen?
+  utter_verabschieden:
+  - text: Tchüss!
+  utter_inform_gemuese:
+  - text: Sie suchen {gemuese}?

@@ -1,0 +1,21 @@
+version: "2.0"
+
+nlu:
+- intent: begruessen
+  examples: |
+    - hallo
+    - moin
+    - guten morgen
+    - guten tag
+
+- intent: verabschieden
+  examples: |
+    - tchüss
+    - tchau
+    - bye
+
+- intent: inform_gemuese
+  examples: |
+    - Ich suche [Blumenkohl]{"entity": "gemuese"}
+    - gibts [Kartoffeln]{"entity": "gemuese"}
+    - ich will [Zwiebeln]{"entity": "gemuese"}
