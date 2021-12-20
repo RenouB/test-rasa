@@ -7,4 +7,4 @@ stories:
   - intent: begruessen
   - action: utter_begruessen
   - intent: inform_gemuese
-  - action: utter_inform_gemuese
+  - action: action_search_gemuese

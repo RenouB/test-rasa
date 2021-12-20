@@ -8,7 +8,7 @@
 */__pycache__
 # C extensions
 *.so
-
+domain_db
 # Packages
 *.egg
 *.egg-info

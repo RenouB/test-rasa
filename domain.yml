@@ -19,3 +19,5 @@ responses:
   - text: Tchüss!
   utter_inform_gemuese:
   - text: Sie suchen {gemuese}?
+actions:
+- action_search_gemuese

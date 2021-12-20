@@ -10,22 +10,21 @@
 # Server which runs your custom actions.
 # https://rasa.com/docs/rasa/custom-actions
 
-#action_endpoint:
-#  url: "http://localhost:5055/webhook"
+action_endpoint:
+ url: "http://localhost:5055/webhook"
 
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
 # https://rasa.com/docs/rasa/tracker-stores
 
-tracker_store:
-    type: SQL
-    dialect: "postgresql"  # the dialect used to interact with the db
-    url: "localhost"  # (optional) host of the sql db, e.g. "localhost"
-    port: 5432
-    db: "testrasa"  # path to your db
-    username:  "renou"
-    password: "password"
-    
+# tracker_store:
+#     type: SQL
+#     dialect: "postgresql"  # the dialect used to interact with the db
+#     url: "localhost"  # (optional) host of the sql db, e.g. "localhost"
+#     port: 5432
+#     db: "testrasa"  # path to your db
+#     username:  "renou"
+#     password: "password"
     
 #tracker_store:
 #    type: mongod

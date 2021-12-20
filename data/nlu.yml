@@ -19,3 +19,5 @@ nlu:
     - Ich suche [Blumenkohl]{"entity": "gemuese"}
     - gibts [Kartoffeln]{"entity": "gemuese"}
     - ich will [Zwiebeln]{"entity": "gemuese"}
+    - [kartoffel]{"entity": "gemuese"}
+    - was geht mit den [kartoffeln]{"entity": "gemuese"}
