@@ -1,3 +1,4 @@
+domain-db
 *.py[cod]
 *.pyc
 *.tar*
@@ -8,7 +9,6 @@
 */__pycache__
 # C extensions
 *.so
-domain_db
 # Packages
 *.egg
 *.egg-info

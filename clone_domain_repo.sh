@@ -1,3 +1,3 @@
 cd /app/actions
-[ -d "domain_db" ] && rm -rf domain_db
+[ -d "domain-db" ] && rm -rf domain-db
 git clone https://github.com/RenouB/domain-db.git

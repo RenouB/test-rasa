@@ -1,2 +1,2 @@
-cd /app/actions/domain_db
+cd /app/actions/domain-db
 git pull
