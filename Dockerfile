@@ -19,8 +19,8 @@ COPY ./pull_domain_repo.sh /app
 COPY ./clone_domain_repo.sh /app
 RUN apt-get -y update
 RUN apt-get install -y git python3-dev libpq-dev gcc 
+RUN rm -rf /app/actions/domain-db
 RUN bash /app/clone_domain_repo.sh
-
 RUN pip3 install -r /app/actions/actions-requirements.txt
 
 RUN cd /app/actions/domain-db && python3 setup.py develop

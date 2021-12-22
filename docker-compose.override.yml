@@ -1,0 +1,33 @@
+version: "3.4"
+
+services:
+  domain_db:
+    hostname: domain_db
+    container_name: domain_db
+    restart: always
+    image: bitnami/postgresql:12
+    volumes:
+      - ./domain_db:/data/postgres
+    environment:
+      POSTGRES_USERNAME: ${DOMAIN_DB_USERNAME}
+      POSTGRES_PASSWORD: ${DOMAIN_DB_PASSWORD}
+      PGDATA: /data/postgres
+    expose:
+      - "5432"
+
+  app:
+    restart: always
+    image: "renoub/testrasa:1"
+    expose:
+      - "5055"
+    environment:
+      DOMAIN_DB_USERNAME: ${DOMAIN_DB_USERNAME}
+      DOMAIN_DB_PASSWORD: ${DOMAIN_DB_PASSWORD}
+      DOMAIN_DB_NAME: ${DOMAIN_DB_NAME}
+      DOMAIN_DB_PORT: ${DOMAIN_DB_PORT}
+      DOMAIN_DB_TYPE: ${DOMAIN_DB_TYPE}
+      DOMAIN_DB_HOST: ${DOMAIN_DB_HOST}
+    volumes:
+      - ${PATH_TO_DOMAIN_DB_REPO}:/app/actions/domain-db
+    depends_on:
+      - rasa-production
